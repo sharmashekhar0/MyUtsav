@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+   <item
+       android:id="@+id/nav_home"
+       android:title="Home"
+       android:icon="@drawable/baseline_home_24"></item>
+    <item
+        android:id="@+id/check_list"
+        android:title="ToDo List"
+        android:icon="@drawable/baseline_checklist_24"></item>
+    <item
+        android:id="@+id/guests"
+        android:title="Guests"
+        android:icon="@drawable/baseline_co_present_24"></item>
+    <item
+        android:id="@+id/budget"
+        android:title="Budget"
+        android:icon="@drawable/baseline_currency_rupee_24"></item>
+    <item
+        android:id="@+id/menu"
+        android:title="Menu"
+        android:icon="@drawable/baseline_menu_24"></item>
+</menu>

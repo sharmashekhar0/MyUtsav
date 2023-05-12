@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">My Utsav</string>
+    <string name="my_utsav">MyUtsav</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="menu" />
+
+    <string name="about">
+        <b>MyUtsav</b> is an <i>Android</i>application for Planning any events like Birthday Parties,Wedding,Anniversaries
+        or any corporate event.
+        <b>MyUtsav</b> keep track of important tasks,manage guest list,budget etc.<br></br>
+        <b>MyUtsav</b> has many preferred party themes,menu and also provide users the capability to customize if they need.<br></br>
+        It can help in controlling expenses as it keep track of all the expenditure and show total amount spent and amount remaining.
+    </string>
+</resources>

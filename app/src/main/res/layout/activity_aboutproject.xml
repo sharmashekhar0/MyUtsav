@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#E1E4FF"
+    android:layout_height="match_parent"
+    tools:context=".aboutproject"
+    >
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appbar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/budget_toolbar"
+            android:background="@color/navbar"
+            app:title="About App"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appbar"
+        android:text="MyUtsav is an Android application for Planning any events like Birthday Parties, Wedding, Anniversaries or any corporate event.MyUtsav keep track of important tasks, manage guest list, budget etc. MyUtsav has many preferred party themes, menu and also provide users the capability to customize if they need.It can help in controlling expenses as it keep track of all the expenditure and show total amount spent,amount remaining and also show over budget amount."
+        android:textSize="20sp"
+        android:gravity="fill_horizontal"
+        android:lineSpacingExtra="3dp"
+        android:justificationMode="inter_word"
+        android:hyphenationFrequency="full"
+        ></TextView>
+
+</RelativeLayout>

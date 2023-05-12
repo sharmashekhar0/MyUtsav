@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:backgroundTint="#E1E4FF"
+    android:layout_height="match_parent"
+    tools:context=".newhomemain"
+    android:background="#C1F1E9E9">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appbar"
+        tools:ignore="MissingConstraints"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/navbar"
+            >
+            <ImageView
+                android:id="@+id/toolbar_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/baseline_home_24" />
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Home"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+
+                android:layout_marginTop="15dp"/>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/eventdetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:elevation="6dp"
+        android:gravity="center"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:padding="10dp"
+        android:layout_below="@+id/appbar"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/shadow_main"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Organizer :          "
+                android:layout_marginLeft="20dp"
+                android:textColor="#0B0909"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:textStyle="bold"
+
+                android:fontFamily="sans-serif-condensed-medium"
+
+                android:shadowDx="1"
+                android:elevation="10dp"
+                android:shadowDy="1"
+                android:shadowRadius="2">
+            </TextView>
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#0B0909"
+
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:text="Kundan Gupta"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:shadowColor="#EA739C"
+                android:shadowDx="1"
+                android:elevation="10dp"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/appbar"
+                tools:ignore="NotSibling"></TextView></LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Event Date :      "
+                android:layout_marginLeft="20dp"
+                android:textColor="#0B0909"
+
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:textStyle="bold"
+
+                android:fontFamily="sans-serif-condensed-medium"
+
+                android:shadowDx="1"
+                android:elevation="10dp"
+                android:shadowDy="1"
+                android:shadowRadius="2">
+            </TextView>
+            <TextView
+                android:id="@+id/eventdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#0B0909"
+                android:paddingLeft="10dp"
+
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:text="12/12/2023"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:shadowColor="#EA739C"
+                android:shadowDx="1"
+                android:elevation="10dp"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/appbar"
+                tools:ignore="NotSibling"></TextView></LinearLayout>
+    </LinearLayout>
+    <ViewFlipper
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:id="@+id/flip"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:elevation="6dp"
+        android:layout_below="@+id/eventdetail"
+
+        ></ViewFlipper>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/detailapp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/flip"
+        android:layout_above="@+id/bnView"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shadow_main"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp">
+
+        <LinearLayout
+            android:id="@+id/menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+
+                android:src="@drawable/baseline_menu_24"></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="  Menu"
+                android:textSize="20dp"
+                android:textStyle="bold"></TextView>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="180dp"
+                android:src="@drawable/baseline_arrow_right_alt_24"></ImageView>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/checklist"
+                >
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/baseline_checklist_24"
+
+                    ></ImageView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" ToDo List"
+                    android:textStyle="bold"
+                    android:textSize="20dp">
+                </TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="80dp"
+                android:id="@+id/tasks">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/baseline_add_task_24"
+                    ></ImageView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Tasks"
+                    android:textStyle="bold"
+                    android:textSize="20dp">
+                </TextView>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/guest">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/baseline_person_24"
+                    ></ImageView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Guests"
+                    android:textStyle="bold"
+                    android:textSize="20dp">
+                </TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="80dp"
+                android:id="@+id/budget"
+                >
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/baseline_currency_rupee_24"
+                    ></ImageView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Budget"
+                    android:textStyle="bold"
+                    android:textSize="20dp">
+                </TextView>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bnView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/navbar"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:menu="@menu/nav_item"
+        />
+</RelativeLayout>

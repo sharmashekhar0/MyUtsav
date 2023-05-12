@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "405445070288",
+    "firebase_url": "https://myutsav-default-rtdb.firebaseio.com",
+    "project_id": "myutsav",
+    "storage_bucket": "myutsav.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:405445070288:android:1c614efcf3b6f8e2b3bdd5",
+        "android_client_info": {
+          "package_name": "com.example.myutsav"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "405445070288-acjl2o5c83ak70adspfj1pjekjhflkio.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCO_5VpRXRqsfZGp5aIl-42eAuu8OlUGgs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "405445070288-acjl2o5c83ak70adspfj1pjekjhflkio.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

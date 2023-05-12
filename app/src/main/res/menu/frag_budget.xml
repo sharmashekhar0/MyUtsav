@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item  android:id="@+id/fr_budget"
+        android:title="Budget"
+        android:icon="@drawable/baseline_currency_rupee_24"
+        app:showAsAction="always"></item>
+    <item android:title=""
+        android:id="@+id/more"
+        android:icon="@drawable/baseline_more_vert_24"
+        app:showAsAction="always">
+        <menu>
+            <item android:title="Balance"
+                android:id="@+id/balance"
+                android:icon="@drawable/baseline_bar_chart_24"
+                app:showAsAction="ifRoom"></item>
+            <item android:title="Categories"
+                android:id="@+id/categories"
+                android:icon="@drawable/baseline_category_24"
+                app:showAsAction="ifRoom"></item>
+            <item android:title="Settings"
+                android:id="@+id/setting_bug"
+                android:icon="@drawable/baseline_settings_24"
+                app:showAsAction="ifRoom"></item>
+        </menu>
+    </item>
+</menu>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".eventform">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/menu_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/navbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="Update task"
+            app:titleTextColor="@color/white" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:textColorLink="@color/black"
+        android:hint="Task-Name"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textColor="#FF252323"
+        android:textColorHint="#d5d4d4"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_below="@+id/appbar"
+        app:layout_constraintVertical_bias="0.07"></EditText>
+    <EditText
+        android:id="@+id/note"
+        android:layout_width="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Task disription"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textColor="#FF252323"
+        android:textColorHint="#d5d4d4"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_below="@+id/name"
+        app:layout_constraintVertical_bias="0.07"></EditText>
+
+    <EditText
+        android:id="@+id/category"
+        android:layout_width="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+
+        android:ems="10"
+        android:hint="Task Category"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textColor="#FF252323"
+        android:textColorHint="#d5d4d4"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_below="@+id/note"
+        app:layout_constraintVertical_bias="0.07"></EditText>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/scroll"
+        android:layout_below="@id/category">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnCount="2"
+            android:rowCount="1">
+
+            <TextView
+                android:padding="10dp"
+                android:id="@+id/complete"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="5sp"
+                android:onClick="status"
+                android:background="@drawable/shadow"
+                android:elevation="10dp"
+                android:gravity="center"
+                android:shadowColor="#292525"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="Complete"
+                android:textColor="#fff"
+                android:textSize="20dp"></TextView>
+
+            <TextView
+                android:id="@+id/pending"
+                android:padding="10dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_margin="5sp"
+                android:background="@drawable/shadow"
+                android:elevation="10dp"
+                android:gravity="center"
+                android:onClick="status"
+                android:shadowColor="#292525"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="Pending"
+                android:textColor="#fff"
+                android:textSize="20dp"></TextView>
+        </GridLayout>
+    </ScrollView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scroll"
+        android:layout_marginTop="10dp"
+        android:id="@+id/addtask"
+        android:background="@drawable/shadow"
+        android:text="Update Task"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="1"
+        android:elevation="10dp"
+        android:shadowColor="@color/black"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addtask"
+        android:layout_marginTop="10dp"
+        android:id="@+id/delete"
+        android:background="@drawable/shadow"
+        android:text="Delete Task"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="1"
+        android:elevation="10dp"
+        android:shadowColor="@color/black"
+        />
+</RelativeLayout>

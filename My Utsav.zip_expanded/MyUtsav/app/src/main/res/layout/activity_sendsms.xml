@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".sendsms">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appbar"
+        tools:ignore="MissingConstraints">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/help_toolbar"
+        android:layout_width="match_parent"
+        app:title="SEND SMS"
+        android:layout_height="wrap_content"
+        android:background="@color/navbar"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="#ffffff"></androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <TextView
+        android:layout_width="match_parent "
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appbar"
+        android:padding="10dp"
+        android:layout_marginTop="16dp"
+        android:text="!!Send Message to Relative via SMS!!"
+        android:textAlignment="center"
+        android:fontFamily="cursive"
+        android:textSize="25dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:shadowColor="@color/navbar"
+        android:background="@drawable/shadow"
+        android:elevation="4dp"
+        android:id="@+id/title"
+        ></TextView>
+    <EditText
+        android:id="@+id/guestname"
+        android:layout_width="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+
+        android:hint="Enter Guest Name"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textColorHint="#d5d4d4"
+        android:textSize="23sp"
+        android:layout_below="@+id/title"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintVertical_bias="0.07"
+        android:layout_marginTop="20dp"></EditText>
+    <EditText
+        android:id="@+id/guestnumber"
+        android:layout_width="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+
+        android:hint="Guest Mobile Number"
+        android:inputType="text"
+        android:padding="10dp"
+
+        android:textColorHint="#d5d4d4"
+        android:textSize="23sp"
+        android:layout_below="@+id/guestname"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guestname"
+        app:layout_constraintVertical_bias="0.07"
+        android:layout_marginTop="20dp"></EditText>
+    <EditText
+        android:id="@+id/guestmsg"
+        android:layout_width="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+
+        android:hint="Guest Invite Message"
+        android:inputType="text"
+        android:padding="10dp"
+
+        android:textColorHint="#d5d4d4"
+        android:textSize="23sp"
+        android:layout_below="@+id/guestnumber"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.07"
+        android:layout_marginTop="20dp"></EditText>
+    <EditText
+        android:id="@+id/guestaddress"
+        android:layout_width="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter Venue Address"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textColorHint="#d5d4d4"
+        android:textSize="23sp"
+        android:layout_below="@+id/guestmsg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintVertical_bias="0.07"
+        android:layout_marginTop="20dp"></EditText>
+
+    <LinearLayout
+        android:id="@+id/invitlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/guestaddress"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="72dp"
+
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/smsbtn"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/invitlayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:background="#0044EF"
+        android:padding="10dp"
+        android:text="Send SMS"
+        android:textColor="@color/white"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"></Button>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/smsbtn"
+        android:layout_alignParentBottom="true"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginBottom="120dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"></ProgressBar>
+</RelativeLayout>
